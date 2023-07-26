@@ -23,13 +23,16 @@ class MoviesDiscoveryViewModel: MoviesDiscoveryViewModelProtocol {
     private var totalPages: Int = 2
     private var currentPage: Int = 1
     private let imageBaseURL: String
+    private let mainQueue: DispatchQueueType
     private let networkService: NetworkService
     private let semaphore: DispatchSemaphore = DispatchSemaphore(value: 1)
     
     var selectedMovieID = 0
     
     init(imageBaseURL: String = Constants.imageBaseURL,
+         mainQueue: DispatchQueueType = DispatchQueue.main,
          networkService: NetworkService = NetworkServiceImpl()) {
+        self.mainQueue = mainQueue
         self.imageBaseURL = imageBaseURL
         self.networkService = networkService
     }
@@ -52,7 +55,7 @@ class MoviesDiscoveryViewModel: MoviesDiscoveryViewModelProtocol {
     }
 
     private func handleNetworkCompletion(result: Result<MoviesDiscoveryResponse, Error>) {
-        DispatchQueue.main.async { [weak self] in
+        mainQueue.async { [weak self] in
             switch result {
             case .success(let response):
                 self?.movies.append(contentsOf: response.results)

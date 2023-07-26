@@ -21,13 +21,16 @@ class MovieDetailsViewModel: MovieDetailsViewModelProtocol {
     @Published private(set) var showingAlert: Bool = false
 
     private let networkService: NetworkService
+    private let mainQueue: DispatchQueueType
     private let imageBaseURL: String
     private let movieId: Int
     
     init(movieId: Int,
+         mainQueue: DispatchQueueType = DispatchQueue.main,
          imageBaseURL: String = Constants.imageBaseURL,
          networkService: NetworkService = NetworkServiceImpl()) {
         self.movieId = movieId
+        self.mainQueue = mainQueue
         self.imageBaseURL = imageBaseURL
         self.networkService = networkService
     }
@@ -54,7 +57,7 @@ class MovieDetailsViewModel: MovieDetailsViewModelProtocol {
     }
     
     private func handleNetworkCompletion(result: Result<MovieDetails, Error>) {
-        DispatchQueue.main.async { [weak self] in
+        mainQueue.async { [weak self] in
             switch result {
             case .success(let movieDetails):
                 self?.movieDetails = movieDetails

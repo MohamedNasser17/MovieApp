@@ -38,7 +38,7 @@ struct MoviesDiscoveryView<ViewModel>: View where ViewModel: MoviesDiscoveryView
         .sheet(isPresented: $isPresented) {
             MovieDetailsView(viewModel: MovieDetailsViewModel(movieId: viewModel.selectedMovieID))
         }
-        .alert("Sorry, Somthing went wrong", isPresented: .constant(viewModel.showingAlert)) {
+        .alert("Sorry, Something went wrong", isPresented: .constant(viewModel.showingAlert)) {
             Button("OK", role: .cancel) {
                 
             }
