@@ -36,7 +36,7 @@ struct MoviesDiscoveryView<ViewModel>: View where ViewModel: MoviesDiscoveryView
             viewModel.fetchFirstPage()
         }
         .sheet(isPresented: $isPresented) {
-            MovieDetailsView()
+            MovieDetailsView(viewModel: MovieDetailsViewModel(movieId: viewModel.selectedMovieID))
         }
         .alert("Sorry, Somthing went wrong", isPresented: .constant(viewModel.showingAlert)) {
             Button("OK", role: .cancel) {

@@ -8,6 +8,20 @@
 import Foundation
 
 struct MockedModels {
+    var movieDetails: MovieDetails {
+        MovieDetails(
+            id: 2,
+            runtime: 30,
+            title: "Movie Title",
+            genres: [Genre(id: 1, name: "Action"),
+                     Genre(id: 2, name: "Comdy")],
+            overview: "OverView",
+            posterPath: "/fCayJrkfRaCRCTh8GqN30f8oyQF.jpg",
+            releaseDate: "2023-12-12",
+            backdropPath: "/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+        )
+    }
+    
     var movie: Movie {
         Movie(
             id: 2,
