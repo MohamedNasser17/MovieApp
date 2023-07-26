@@ -7,14 +7,48 @@
 
 import SwiftUI
 
-struct MoviesDiscoveryView: View {
+struct MoviesDiscoveryView<ViewModel>: View where ViewModel: MoviesDiscoveryViewModelProtocol {
+    @ObservedObject var viewModel: ViewModel
+    @State private var isPresented = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            List {
+                ForEach(viewModel.movies, id: \.id) { movie in
+                    MoviesDiscoveryCardView(movie: movie, size: proxy.size)
+                        .onTapGesture {
+                            viewModel.selectedMovieID = movie.id
+                            isPresented.toggle()
+                        }
+                        .onAppear {
+                            if movie.id == viewModel.movies.last?.id {
+                                viewModel.fetchNextPage()
+                            }
+                        }
+                }
+                .listRowBackground(Color.black)
+                .listRowSeparator(.hidden, edges: .all)
+            }
+        }
+        .listStyle(.plain)
+        .background(Color.black)
+        .onAppear {
+            viewModel.fetchFirstPage()
+        }
+        .alert("Sorry, Somthing went wrong", isPresented: .constant(viewModel.showingAlert)) {
+            Button("OK", role: .cancel) {
+                
+            }
+        }
     }
 }
 
 struct MoviesDiscoveryView_Previews: PreviewProvider {
     static var previews: some View {
-        MoviesDiscoveryView()
+        MoviesDiscoveryView(
+            viewModel: MoviesDiscoveryViewModel(
+                networkService: MockNetworkService(item: MockedModels().moviesDiscoveryResponse)
+            )
+        ).previewLayout(.sizeThatFits)
     }
 }
