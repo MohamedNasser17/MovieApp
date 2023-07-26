@@ -12,19 +12,10 @@
 		C93C776D2A70B49A00A2BC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93C776C2A70B49A00A2BC1F /* Assets.xcassets */; };
 		C93C77712A70B49A00A2BC1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93C77702A70B49A00A2BC1F /* Preview Assets.xcassets */; };
 		C93C777B2A70B49A00A2BC1F /* MovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C777A2A70B49A00A2BC1F /* MovieAppTests.swift */; };
-		C93C77852A70B49A00A2BC1F /* MovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77842A70B49A00A2BC1F /* MovieAppUITests.swift */; };
-		C93C77872A70B49A00A2BC1F /* MovieAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77862A70B49A00A2BC1F /* MovieAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C93C77772A70B49A00A2BC1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C93C775D2A70B49900A2BC1F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C93C77642A70B49900A2BC1F;
-			remoteInfo = MovieApp;
-		};
-		C93C77812A70B49A00A2BC1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C93C775D2A70B49900A2BC1F /* Project object */;
 			proxyType = 1;
@@ -42,9 +33,6 @@
 		C93C77702A70B49A00A2BC1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C93C77762A70B49A00A2BC1F /* MovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93C777A2A70B49A00A2BC1F /* MovieAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppTests.swift; sourceTree = "<group>"; };
-		C93C77802A70B49A00A2BC1F /* MovieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C93C77842A70B49A00A2BC1F /* MovieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITests.swift; sourceTree = "<group>"; };
-		C93C77862A70B49A00A2BC1F /* MovieAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93C777D2A70B49A00A2BC1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +58,6 @@
 			children = (
 				C93C77672A70B49900A2BC1F /* MovieApp */,
 				C93C77792A70B49A00A2BC1F /* MovieAppTests */,
-				C93C77832A70B49A00A2BC1F /* MovieAppUITests */,
 				C93C77662A70B49900A2BC1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +67,6 @@
 			children = (
 				C93C77652A70B49900A2BC1F /* MovieApp.app */,
 				C93C77762A70B49A00A2BC1F /* MovieAppTests.xctest */,
-				C93C77802A70B49A00A2BC1F /* MovieAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +74,12 @@
 		C93C77672A70B49900A2BC1F /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				C93C77682A70B49900A2BC1F /* MovieAppApp.swift */,
-				C93C776A2A70B49900A2BC1F /* ContentView.swift */,
-				C93C776C2A70B49A00A2BC1F /* Assets.xcassets */,
-				C93C776E2A70B49A00A2BC1F /* MovieApp.entitlements */,
-				C93C776F2A70B49A00A2BC1F /* Preview Content */,
+				C93C77932A70B4BB00A2BC1F /* App */,
+				C93C77942A70B4C100A2BC1F /* Models */,
+				C93C77952A70B4CB00A2BC1F /* Services */,
+				C93C77962A70B4D000A2BC1F /* Modules */,
+				C93C77972A70B4E200A2BC1F /* Utils */,
+				C93C77982A70B4F100A2BC1F /* Assets */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -120,13 +100,51 @@
 			path = MovieAppTests;
 			sourceTree = "<group>";
 		};
-		C93C77832A70B49A00A2BC1F /* MovieAppUITests */ = {
+		C93C77932A70B4BB00A2BC1F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C93C77842A70B49A00A2BC1F /* MovieAppUITests.swift */,
-				C93C77862A70B49A00A2BC1F /* MovieAppUITestsLaunchTests.swift */,
+				C93C776A2A70B49900A2BC1F /* ContentView.swift */,
+				C93C77682A70B49900A2BC1F /* MovieAppApp.swift */,
+				C93C776E2A70B49A00A2BC1F /* MovieApp.entitlements */,
 			);
-			path = MovieAppUITests;
+			path = App;
+			sourceTree = "<group>";
+		};
+		C93C77942A70B4C100A2BC1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C93C77952A70B4CB00A2BC1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C93C77962A70B4D000A2BC1F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C93C77972A70B4E200A2BC1F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C93C77982A70B4F100A2BC1F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C93C776C2A70B49A00A2BC1F /* Assets.xcassets */,
+				C93C776F2A70B49A00A2BC1F /* Preview Content */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,24 +185,6 @@
 			productReference = C93C77762A70B49A00A2BC1F /* MovieAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C93C777F2A70B49A00A2BC1F /* MovieAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C93C77902A70B49A00A2BC1F /* Build configuration list for PBXNativeTarget "MovieAppUITests" */;
-			buildPhases = (
-				C93C777C2A70B49A00A2BC1F /* Sources */,
-				C93C777D2A70B49A00A2BC1F /* Frameworks */,
-				C93C777E2A70B49A00A2BC1F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C93C77822A70B49A00A2BC1F /* PBXTargetDependency */,
-			);
-			name = MovieAppUITests;
-			productName = MovieAppUITests;
-			productReference = C93C77802A70B49A00A2BC1F /* MovieAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,10 +199,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					C93C77752A70B49A00A2BC1F = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = C93C77642A70B49900A2BC1F;
-					};
-					C93C777F2A70B49A00A2BC1F = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = C93C77642A70B49900A2BC1F;
 					};
@@ -223,7 +219,6 @@
 			targets = (
 				C93C77642A70B49900A2BC1F /* MovieApp */,
 				C93C77752A70B49A00A2BC1F /* MovieAppTests */,
-				C93C777F2A70B49A00A2BC1F /* MovieAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +234,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C93C77742A70B49A00A2BC1F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C93C777E2A70B49A00A2BC1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +260,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93C777C2A70B49A00A2BC1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C93C77872A70B49A00A2BC1F /* MovieAppUITestsLaunchTests.swift in Sources */,
-				C93C77852A70B49A00A2BC1F /* MovieAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +267,6 @@
 			isa = PBXTargetDependency;
 			target = C93C77642A70B49900A2BC1F /* MovieApp */;
 			targetProxy = C93C77772A70B49A00A2BC1F /* PBXContainerItemProxy */;
-		};
-		C93C77822A70B49A00A2BC1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C93C77642A70B49900A2BC1F /* MovieApp */;
-			targetProxy = C93C77812A70B49A00A2BC1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -411,10 +385,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MovieApp/MovieApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MovieApp/App/MovieApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -425,8 +399,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -435,7 +408,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,10 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MovieApp/MovieApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MovieApp/App/MovieApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MovieApp/Assets/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -461,8 +436,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -471,7 +445,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,7 +468,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,53 +492,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MovieApp";
-			};
-			name = Release;
-		};
-		C93C77912A70B49A00A2BC1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieApp;
-			};
-			name = Debug;
-		};
-		C93C77922A70B49A00A2BC1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.movies.MovieAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieApp;
 			};
 			name = Release;
 		};
@@ -590,15 +528,6 @@
 			buildConfigurations = (
 				C93C778E2A70B49A00A2BC1F /* Debug */,
 				C93C778F2A70B49A00A2BC1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C93C77902A70B49A00A2BC1F /* Build configuration list for PBXNativeTarget "MovieAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C93C77912A70B49A00A2BC1F /* Debug */,
-				C93C77922A70B49A00A2BC1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
