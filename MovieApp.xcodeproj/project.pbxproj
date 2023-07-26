@@ -15,6 +15,9 @@
 		C93C779E2A70B68400A2BC1F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C779D2A70B68400A2BC1F /* EndPoint.swift */; };
 		C93C77A02A70B69400A2BC1F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C779F2A70B69400A2BC1F /* NetworkService.swift */; };
 		C93C77A22A70B6C300A2BC1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77A12A70B6C300A2BC1F /* Constants.swift */; };
+		C93C77A42A70B7B700A2BC1F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77A32A70B7B700A2BC1F /* Movie.swift */; };
+		C93C77A62A70B7D300A2BC1F /* MoviesDiscoveryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77A52A70B7D300A2BC1F /* MoviesDiscoveryResponse.swift */; };
+		C93C77A92A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C77A82A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		C93C779D2A70B68400A2BC1F /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		C93C779F2A70B69400A2BC1F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		C93C77A12A70B6C300A2BC1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C93C77A32A70B7B700A2BC1F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C93C77A52A70B7D300A2BC1F /* MoviesDiscoveryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDiscoveryResponse.swift; sourceTree = "<group>"; };
+		C93C77A82A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDiscoveryEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 		C93C77942A70B4C100A2BC1F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C93C77A32A70B7B700A2BC1F /* Movie.swift */,
+				C93C77A52A70B7D300A2BC1F /* MoviesDiscoveryResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C93C779C2A70B67300A2BC1F /* Core */,
+				C93C77A72A70B7FA00A2BC1F /* EndPoints */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -170,6 +179,14 @@
 				C93C779F2A70B69400A2BC1F /* NetworkService.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C93C77A72A70B7FA00A2BC1F /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				C93C77A82A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift */,
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93C77A62A70B7D300A2BC1F /* MoviesDiscoveryResponse.swift in Sources */,
 				C93C77A22A70B6C300A2BC1F /* Constants.swift in Sources */,
 				C93C779E2A70B68400A2BC1F /* EndPoint.swift in Sources */,
+				C93C77A42A70B7B700A2BC1F /* Movie.swift in Sources */,
+				C93C77A92A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift in Sources */,
 				C93C776B2A70B49900A2BC1F /* ContentView.swift in Sources */,
 				C93C77A02A70B69400A2BC1F /* NetworkService.swift in Sources */,
 				C93C77692A70B49900A2BC1F /* MovieAppApp.swift in Sources */,
