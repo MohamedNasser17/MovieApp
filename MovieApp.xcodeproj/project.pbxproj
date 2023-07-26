@@ -24,6 +24,8 @@
 		C9C9080C2A70C80D0053CDE1 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9080B2A70C80D0053CDE1 /* MockNetworkService.swift */; };
 		C9C90EA92A70C9C70053CDE1 /* MovieDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C90EA82A70C9C70053CDE1 /* MovieDetailsEndPoint.swift */; };
 		C9C90EAB2A70C9E00053CDE1 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C90EAA2A70C9E00053CDE1 /* MovieDetails.swift */; };
+		C9C90EAE2A70CCF40053CDE1 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C90EAD2A70CCF40053CDE1 /* MovieDetailsView.swift */; };
+		C9C90EB02A70CD030053CDE1 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C90EAF2A70CD030053CDE1 /* MovieDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C9C9080B2A70C80D0053CDE1 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		C9C90EA82A70C9C70053CDE1 /* MovieDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsEndPoint.swift; sourceTree = "<group>"; };
 		C9C90EAA2A70C9E00053CDE1 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
+		C9C90EAD2A70CCF40053CDE1 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		C9C90EAF2A70CD030053CDE1 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		C93C77962A70B4D000A2BC1F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C9C90EAC2A70CCE80053CDE1 /* MovieDetails */,
 				C93C77B22A70B9DE00A2BC1F /* MoviesDiscovery */,
 			);
 			path = Modules;
@@ -221,6 +226,15 @@
 				C9C9080B2A70C80D0053CDE1 /* MockNetworkService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C9C90EAC2A70CCE80053CDE1 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C9C90EAD2A70CCF40053CDE1 /* MovieDetailsView.swift */,
+				C9C90EAF2A70CD030053CDE1 /* MovieDetailsViewModel.swift */,
+			);
+			path = MovieDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,7 +345,9 @@
 				C93C779E2A70B68400A2BC1F /* EndPoint.swift in Sources */,
 				C9C9080A2A70C7EE0053CDE1 /* MockedModels.swift in Sources */,
 				C93C77A42A70B7B700A2BC1F /* Movie.swift in Sources */,
+				C9C90EB02A70CD030053CDE1 /* MovieDetailsViewModel.swift in Sources */,
 				C93C77B42A70B9EC00A2BC1F /* MoviesDiscoveryView.swift in Sources */,
+				C9C90EAE2A70CCF40053CDE1 /* MovieDetailsView.swift in Sources */,
 				C93C77A92A70B80500A2BC1F /* MoviesDiscoveryEndPoint.swift in Sources */,
 				C93C77A02A70B69400A2BC1F /* NetworkService.swift in Sources */,
 				C93C77B62A70BA0300A2BC1F /* MoviesDiscoveryViewModel.swift in Sources */,

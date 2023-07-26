@@ -35,6 +35,9 @@ struct MoviesDiscoveryView<ViewModel>: View where ViewModel: MoviesDiscoveryView
         .onAppear {
             viewModel.fetchFirstPage()
         }
+        .sheet(isPresented: $isPresented) {
+            MovieDetailsView()
+        }
         .alert("Sorry, Somthing went wrong", isPresented: .constant(viewModel.showingAlert)) {
             Button("OK", role: .cancel) {
                 
